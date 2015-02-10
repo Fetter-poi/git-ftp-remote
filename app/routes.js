@@ -1,7 +1,7 @@
 var path = require('path');
 
 // grab the nerd model we just created
-var Nerd = require('./models/nerd');
+var Repo = require('./models/repo');
 
 module.exports = function(app) {
 
@@ -10,16 +10,16 @@ module.exports = function(app) {
     // authentication routes
 
     // sample api route
-    app.get('/api/nerds', function(req, res) {
+    app.get('/api/repos', function(req, res) {
         // use mongoose to get all nerds in the database
-        Nerd.find(function(err, nerds) {
+        Repo.find(function(err, repos) {
 
-		    // if there is an error retrieving, send the error. 
+		    // if there is an error retrieving, send the error.
 		    // nothing after res.send(err) will execute
 		    if (err)
                 res.send(err);
 
-		    res.json(nerds); // return all nerds in JSON format
+		    res.json(repos); // return all nerds in JSON format
 		});
     });
 
