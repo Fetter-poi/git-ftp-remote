@@ -9,7 +9,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         })
 
         // nerds page that will use the NerdController
-        .when('/nerds', {
+        .when('/repos', {
             templateUrl: 'views/repo.html',
             controller: 'RepoController'
         });

@@ -1,6 +1,7 @@
 angular.module('RepoService', []).factory('Repo', ['$http', function($http) {
 
     return {
+        console.log('here');
         // call to get all repos
         get : function() {
             return $http.get('/api/repos/');
